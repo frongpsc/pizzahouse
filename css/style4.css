@@ -1,0 +1,123 @@
+/* Global properties ======================================================== */
+a[href^="tel:"] { color: inherit; text-decoration: none;}
+::selection{ background:#e4cd7f!important; color:#fff}
+::-moz-selection{ background:#e4cd7f!important; color:#fff}
+
+a{ color:#e4cd7f; text-decoration: underline; outline:none}
+a:hover{ color:#e4cd7f; text-decoration: none; outline:none}
+
+.container { position: relative; min-width: 320px;}
+
+#main{margin: 0 auto; position: relative; overflow: hidden;}
+
+/* Page Animated item Styles */
+.animated {
+  visibility: hidden;
+}
+
+.visible {
+visibility: visible;
+}
+
+.create {
+    background: url(../picpiz/pb.png) no-repeat ;
+    
+    margin-top: 150px;
+}
+.create .submit{
+    margin-left: 50px;
+
+}
+.create .topic{
+    color: rgb(255, 255, 255); 
+}
+
+.create .size{
+    color: rgb(255, 255, 255); 
+}
+
+.create .crust{
+    color: rgb(255, 255, 255); 
+}
+
+.create .sauce{
+    color: rgb(255, 255, 255); 
+}
+
+.create .cheese{
+    color: rgb(255, 255, 255); 
+}
+
+.create .meat{
+    color: rgb(255, 255, 255); 
+}
+
+.create .topping{
+    color: rgb(255, 0, 0); 
+}
+td {
+    text-align: center; /* center checkbox horizontally */
+    vertical-align: middle; /* center checkbox vertically */
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 500;
+    font-family: 'Raleway', sans-serif;
+    background: #666 url(../bg1.jpg);
+
+}
+.menubar{
+    margin-left: 3%;
+}
+.menubar .menu{
+    width: 100%;
+    height: 50px;
+    background: #fffffffb;
+    box-shadow: 0 0 10px rgb(255, 255, 255); 
+}
+.menubar ul.menu {
+    list-style: none;
+    float: right;
+
+}
+.menubar ul.menu li {
+    padding-top: 15px;
+    float: left;
+    margin-left: 2%;
+    margin-right: 50px;
+}
+.menubar ul.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    margin-left: 50px;
+
+}
+.menubar ul.menu li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 0;
+}
+
+.menubar .logo{
+    width: 100%;
+    height: 100px;
+    padding-left: 35%;
+}
+h1{display: block; font-family:'Lobster'; font-weight:400; font-size:44px; color:#fff; line-height:1.1; padding:10px 0 0px 0; margin: 0 0 20px; background: url(/picpiz/h1.png) center top no-repeat; min-height: 104px; text-align: center;}
+
+
+.a {
+    font-size: 15px;
+}
+
+input[type=submit] {
+    background: url(picpiz/ob.png;
+    border: 0;
+    display: block;
+    height: _the_image_height;
+    width: _the_image_width;

@@ -1,0 +1,131 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 500;
+    font-family: 'Raleway', sans-serif;
+    background: #666 url(../bg1.jpg);
+}
+.menubar{
+    margin-left: 3%;
+}
+.menubar .menu{
+    width: 100%;
+    height: 50px;
+    background: #fffffffb;
+    box-shadow: 0 0 10px rgb(255, 255, 255); 
+}
+.menubar ul.menu {
+    list-style: none;
+    float: right;
+
+}
+.menubar ul.menu li {
+    padding-top: 15px;
+    float: left;
+    margin-left: 2%;
+    margin-right: 50px;
+}
+.menubar ul.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    margin-left: 50px;
+
+}
+.menubar ul.menu li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 0;
+}
+
+.menubar .logo{
+    width: 100%;
+    height: 100px;
+    padding-left: 35%;
+}
+.branch p {
+    padding-top: 80px;
+    font-size: 40px;
+    color: #ffffff;
+}
+.branch h1{
+    color: #ffffff;
+    clear: both;
+    font-size: 70px;
+
+}
+.contact {
+    padding-left: 50px;
+    clear: both;
+    width: 100%;
+    height: 515px;
+    color: #ffffff;
+}
+
+.contact_area h1 {
+    font-weight: normal;
+}
+.contact_area input {
+    margin: 10px 0;
+    border: 2px solid #333;
+    width: 350px;
+    padding: 10px;
+}
+
+.contact_area textarea {
+    margin: 10px 0;
+    border: 2px solid #333;
+    width: 350px;
+    padding: 10px;
+}
+
+.contact_area button {
+    padding: 10px;
+    width: 90px;
+    background: rgb(92, 92, 92);
+    color: #fff;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.contact_area button:hover {
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.pic1{
+    float: left;
+    padding-bottom: 50px;
+    padding-right: 20px;
+}
+.pic2{
+    float: left;
+    padding-bottom: 50px;
+    padding-right: 20px;
+
+
+}
+.pic3{
+    float: left;
+    padding-bottom: 50px;
+    padding-right: 20px;
+
+
+}
+.pic4{
+    float: left;
+    padding-bottom: 50px;
+    padding-right: 20px;
+
+
+}
+.pic5{
+    float: left;
+    padding-bottom: 50px;
+    padding-right: 20px;
+
+}
