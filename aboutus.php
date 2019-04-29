@@ -4,7 +4,7 @@
 <?php
             $servername = null;
             $username = "root";
-            $password = "pizzahouse";
+            $password = "";
             $dbname = "pizzahouse";
             $port=null;
             $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
