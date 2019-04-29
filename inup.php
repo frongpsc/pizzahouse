@@ -18,7 +18,7 @@ if(isset($_POST['csubmit']))
         $servername = null;
         $username = "root";
         $password = "pizzahouse";
-        $dbname = "PizzahouseDB";
+        $dbname = "pizzahouse";
         $port=null;
         $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
        
