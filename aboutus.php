@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <?php
             $servername = null;
-            $username = "pizzahousenew";
+            $username = "root";
             $password = "pizzahouse";
             $port = null
             $dbname = "pizzahouse";
