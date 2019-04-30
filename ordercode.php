@@ -90,7 +90,7 @@
          
 
 
-         $h = "SELECT * from staff,orders where STAFF_STATUS= 'FREE' AND orders.STAFF_ID=staff.STAFF_ID ORDER BY CTIME ASC LIMIT 0,1   ";
+         /*$h = "SELECT * from staff,orders where STAFF_STATUS= 'FREE' AND orders.STAFF_ID=staff.STAFF_ID ORDER BY CTIME ASC LIMIT 0,1   ";
          $result3 = $conn->query($h);
          if(!$result3)
          {
@@ -119,10 +119,10 @@
             $jrow = $result32->fetch_array();
             }
             $ctime =$jrow['STAFF_ID'];
-            echo $ctime;
+            echo $ctime;*/
          }
         $u = "INSERT INTO orders (ORDER_ID,ORDER_DATEs,ORDER_ADDs,ORDER_TIMEs,ORDER_PRICEs,CUSTOMER_ID,STATUS_ID,STAFF_ID)
-        VALUES ($oid,'$nd','$aid','$nt',$pid,$cid,0,$ctime)";
+        VALUES ($oid,'$nd','$aid','$nt',$pid,$cid,0,55)";
                     if ($conn->query($u) === TRUE) {
 
                         //header("Location: ordered.php?customerid=$cid");
