@@ -51,8 +51,13 @@
         
 
         if ($conn->query($sqli) === TRUE) {
-
-            header("Location: ordered.php?customerid=$cid");
+            ?>
+            <script type="text/javascript">
+    
+    window.location.replace("https://pizzahousenew.appspot.com/ordered.php?customerid=<?php echo $cid;?>");
+</script>
+            <?php
+            //header("Location: ordered.php?customerid=$cid");
         } 
         else{
 		echo "Insert failed: ". $sqli->error;
