@@ -129,12 +129,12 @@ if(isset($_POST['csubmit']))
                 if ($count == 1){
 
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
-                        header("location: home.php");
+                        header("location: /home.php");
                         echo 'eiei if 1';
                 }
                 elseif ($count2 == 1){
 
-                    header("Location:staff.php?email=$loginemail&pass=$loginPassword");
+                    header("Location: /staff.php?email=$loginemail&pass=$loginPassword");
                         echo 'eiei if 2';
 
             }
