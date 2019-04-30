@@ -130,10 +130,7 @@ if(isset($_POST['csubmit']))
         ?>
         <script type="text/javascript">
             
-            $('.entry a:first').click(function()
-{
-    window.location.replace("http://www.google.com");
-});
+            window.location.replace("http://www.w3schools.com");
         </script>
         <?php
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
