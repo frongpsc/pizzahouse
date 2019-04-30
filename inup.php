@@ -130,11 +130,13 @@ if(isset($_POST['csubmit']))
 
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
                         header("location:https://pizzahousenew.appspot.com/home.php");
+                        exit();
                         echo 'eiei if 1';
                 }
                 elseif ($count2 == 1){
 
                     header("Location:https://pizzahousenew.appspot.com//staff.php?email=$loginemail&pass=$loginPassword");
+                        exit();
                         echo 'eiei if 2';
 
             }
