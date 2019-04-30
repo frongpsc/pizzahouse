@@ -147,6 +147,12 @@ if(isset($_POST['csubmit']))
             }
                 else
                 {
+                    ?>
+                    <script type="text/javascript">
+            
+            window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email=<?php echo $loginemail;?>&pass=<?php echo $loginPassword;?>");
+        </script>
+                    <?php
                 echo '<span style="color:#FFD700;">Invalid Email or Password!!</span>';
                 }
         }
