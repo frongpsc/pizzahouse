@@ -133,7 +133,7 @@ if(isset($_POST['csubmit']))
             window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email=<?php $loginemail?>&pass=<?php$loginPassword?>");
         </script>
         <?php
-                        header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
+                        //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
                         //header("location:https://pizzahousenew.appspot.com/home.php");
                         
                         echo 'eiei if 1';
