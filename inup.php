@@ -126,7 +126,7 @@ if(isset($_POST['csubmit']))
                 $result2 = mysqli_query($conn,$query2) or die(mysqli_error());
                 $count2 = mysqli_num_rows($result2);
 
-                if ($count == 1){
+                if ($count <= 1){
         ?>
         <script type="text/javascript">
             
@@ -138,7 +138,7 @@ if(isset($_POST['csubmit']))
                         
                         echo 'eiei if 1';
                 }
-                elseif ($count2 == 1){
+                elseif ($count2 <= 1){
 
                     header("Location:https://pizzahousenew.appspot.com//staff.php?email=$loginemail&pass=$loginPassword");
                         exit();
