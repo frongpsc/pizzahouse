@@ -130,11 +130,11 @@ if(isset($_POST['csubmit']))
         ?>
         <script type="text/javascript">
             
-            window.location.replace("http://www.w3schools.com");
+            window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email=$loginemail&pass=$loginPassword");
         </script>
         <?php
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
-                        header("location:https://pizzahousenew.appspot.com/home.php");
+                        //header("location:https://pizzahousenew.appspot.com/home.php");
                         
                         echo 'eiei if 1';
                 }
