@@ -1,5 +1,6 @@
+
+
 <!DOCTYPE html>
-<?ob_start();?>
 
             <?php
 header("Location:home.php");
@@ -96,6 +97,7 @@ if(isset($_POST['csubmit']))
         </form>
     
         <?php
+            ob_start();
             $servername = null;
             $username = "root";
             $password = "pizzahouse";
@@ -127,7 +129,7 @@ if(isset($_POST['csubmit']))
                 if ($count == 1){
 
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
-                        header("Location: home.php");
+                        header("location: home.php");
                         echo 'eiei if 1';
                 }
                 elseif ($count2 == 1){
@@ -141,6 +143,7 @@ if(isset($_POST['csubmit']))
                 echo '<span style="color:#FFD700;">Invalid Email or Password!!</span>';
                 }
         }
+        ob_end_flush();
 ?>  
             <br>
             <a href="#">Lost your password?</a><br>
@@ -150,5 +153,4 @@ if(isset($_POST['csubmit']))
 
 </body>
 </head>
-<?php ob_end_flush();?>
 </html>

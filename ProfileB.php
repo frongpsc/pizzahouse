@@ -33,7 +33,7 @@
         <input type="hidden" name="iemail"  value="<?=$urow['EMAIL']?>">
         <input type="hidden" name="ipass"  value="<?=$urow['CPASSWORD']?>">
         <script>
-        //document.getElementsByTagName("form")[0].submit();
+        document.getElementsByTagName("form")[0].submit();
         </script>
         </form>
 
