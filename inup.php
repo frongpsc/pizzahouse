@@ -118,7 +118,7 @@ if(isset($_POST['csubmit']))
         if(isset($_POST["loginButton"])){
                 $loginemail = $_POST["iemail"];
                 $loginPassword = $_POST["ipass"];     
-                $query = "SELECT * FROM customer WHERE EMAIL='$loginemail' and CPASSWORD='$loginPassword'";
+                $query = "SELECT * FROM customer WHERE EMAIL=' $loginemail' and CPASSWORD='$loginPassword'";
                 $result = mysqli_query($conn,$query) or die(mysqli_error());
                 $count = mysqli_num_rows($result);
 
@@ -130,7 +130,7 @@ if(isset($_POST['csubmit']))
         ?>
         <script type="text/javascript">
             
-            window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email=<?php $loginemail?>&pass=<?php$loginPassword?>");
+            window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email=<?php echo $loginemail;?>&pass=<?php echo $loginPassword;?>");
         </script>
         <?php
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
