@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?ob_start();?>
 
             <?php
 
@@ -150,4 +151,5 @@ if(isset($_POST['csubmit']))
 
 </body>
 </head>
+<?php ob_end_flush();?>
 </html>
