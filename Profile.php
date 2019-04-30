@@ -19,7 +19,10 @@
         error_reporting(E_ALL);
         ini_set('display error', 1);
         $loginemail = $_POST["iemail"];
-        $loginPassword = $_POST["ipass"];  
+        $loginPassword = $_POST["ipass"]; 
+        echo $loginemail; 
+        echo $loginPassword; 
+
 
 
         ?>            
