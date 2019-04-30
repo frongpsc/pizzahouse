@@ -2,7 +2,7 @@
 <?ob_start();?>
 
             <?php
-
+header("Location:home.php");
 if(isset($_POST['csubmit'])) 
 {
         $firstname = $_POST["firstname"];
@@ -128,8 +128,6 @@ if(isset($_POST['csubmit']))
 
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
                         header("Location:home.php");
-                        exit;
-
                         echo 'eiei if 1';
                 }
                 elseif ($count2 == 1){
