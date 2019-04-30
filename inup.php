@@ -20,10 +20,11 @@ if(isset($_POST['csubmit']))
         $password = "pizzahouse";
  
         $dbname = "pizzahouse";
-        $port = null
+        $port = null;
         $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
+        
 
-    $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+        $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
@@ -99,7 +100,7 @@ if(isset($_POST['csubmit']))
             $password = "pizzahouse";
      
             $dbname = "pizzahouse";
-            $port = null
+            $port = null;
             $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
 
         $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);

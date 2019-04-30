@@ -7,7 +7,7 @@
             $password = "pizzahouse";
      
             $dbname = "pizzahouse";
-            $port = null
+            $port = null;
             $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
 
         $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
@@ -177,7 +177,7 @@
                                                 $password = "pizzahouse";
                                          
                                                 $dbname = "pizzahouse";
-                                                $port = null
+                                                $port = null;
                                                 $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
                                     
                                             $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
