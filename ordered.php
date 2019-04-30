@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <?php
-            $servername = null;
+            $servername = "localhost";
             $username = "root";
-            $password = "pizzahouse";
+            $password = "";
             $dbname = "pizzahouse";
-            $port=null;
-            $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-           
-           $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -35,7 +33,7 @@
         $crow = $result5->fetch_array();
 
         $n=$crow['COUNT_ID'];
-        echo "$n";
+        
         $p = "SELECT * from pizza,orderlist,counts where ORDER_ID = '$n' and pizza.PIZZA_ID = orderlist.PIZZA_ID ";
         $result2 = $conn->query($p);
         if(!$result2)
@@ -93,14 +91,12 @@
                 </colgroup>
 
                 <?php
-            $servername = null;
+            $servername = "localhost";
             $username = "root";
-            $password = "pizzahouse";
+            $password = "";
             $dbname = "pizzahouse";
-            $port=null;
-            $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-           
-           $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
+        $conn = new mysqli($servername, $username,$password,$dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -181,6 +177,9 @@
                         <input name="Uaddress" type= "radio"  value="<?=$urow['CADDRESS2']?>"><?=$urow['CADDRESS2']?><br>
                         <hr>
                         <div class="foot">
+                        <h1 style="color:red">!!!You can't change your order after clicking confirm!!!</h1>
+                        <h1 style="color:red">!!Please carefully check your order again!!</h1>
+
                         <input type="submit"  name="submit"  value="Confirm">
                         </div>
                     </form>

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <?php
-           $servername = null;
-           $username = "root";
-           $password = "pizzahouse";
-           $dbname = "pizzahouse";
-           $port=null;
-           $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-          
-          $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "pizzahouse";
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -32,11 +30,95 @@
         $nd=date("Y-m-d");
         date_default_timezone_set("Asia/Bangkok");
         $nt=date("H:i:s");
-
-
         
-        $u = "INSERT INTO orders (ORDER_ID,ORDER_DATEs,ORDER_ADDs,ORDER_TIMEs,ORDER_PRICEs,CUSTOMER_ID)
-        VALUES ($oid,'$nd','$aid','$nt','$pid',$cid)";
+        $query = "SELECT STAFF_ID FROM staff";
+        $result = mysqli_query($conn,$query) or die(mysqli_error());
+        $count = mysqli_num_rows($result);
+
+        $n = "SELECT * from staff,orders where orders.STAFF_ID = staff.STAFF_ID ";
+        $result3 = $conn->query($n);
+        if(!$result3)
+        {
+            echo "Select failed: ".$conn->error;
+        }
+        while($nrow = $result3->fetch_array())
+        {
+        echo $nrow['STATUS_ID'];
+         }
+
+         
+         $e = "SELECT * from staff  ";
+         $result55 = $conn->query($e);
+         if(!$result55)
+         {
+             echo "Select failed: ".$conn->error;
+         }
+         while($eerow = $result55->fetch_array())
+         {   
+             $io=$eerow['STAFF_ID'];
+             $a = "UPDATE staff set STAFF_STATUS='FREE'  where STAFF_ID=$io";
+             if(!$conn->query($a)){
+                 echo "Update failed: ". $conn->error;
+             }else{    
+                 //header("Location: ADMINstaff.php");
+             }
+         }
+
+         $h = "SELECT * from orders where STATUS_ID= 1 OR STATUS_ID= 0 ";
+         $result77 = $conn->query($h);
+         if(!$result77)
+         {
+             echo "Select failed: ".$conn->error;
+         }
+         while($mmrow = $result77->fetch_array())
+         {   
+             $aa=$mmrow['STAFF_ID'];
+             $b = "UPDATE staff set STAFF_STATUS='NOTFREE'  where STAFF_ID=$aa";
+
+             if(!$conn->query($b)){
+                 echo "Update failed: ". $conn->error;
+             }else{
+                 
+                 //header("Location: ADMINstaff.php");
+         
+             }
+         }
+         
+
+
+         $h = "SELECT * from staff,orders where STAFF_STATUS= 'FREE' AND orders.STAFF_ID=staff.STAFF_ID ORDER BY CTIME ASC LIMIT 0,1   ";
+         $result3 = $conn->query($h);
+         if(!$result3)
+         {
+              echo"qwerfsd";
+        }
+         else
+         {
+            echo "555555";
+
+         $jrow = $result3->fetch_array();
+         }
+         $ctime =$jrow['STAFF_ID'];
+         echo $ctime;
+         if($ctime<1)
+         {
+            echo "asda";
+            $h2 = "SELECT * from staff where STAFF_STATUS= 'FREE'  ";
+            $result32 = $conn->query($h2);
+            if(!$result32)
+            {
+
+                echo "Select failed: ".$conn->error;
+            }
+            else
+            {
+            $jrow = $result32->fetch_array();
+            }
+            $ctime =$jrow['STAFF_ID'];
+            echo $ctime;
+         }
+        $u = "INSERT INTO orders (ORDER_ID,ORDER_DATEs,ORDER_ADDs,ORDER_TIMEs,ORDER_PRICEs,CUSTOMER_ID,STATUS_ID,STAFF_ID)
+        VALUES ($oid,'$nd','$aid','$nt',$pid,$cid,0,$ctime)";
                     if ($conn->query($u) === TRUE) {
 
                         //header("Location: ordered.php?customerid=$cid");
@@ -44,7 +126,6 @@
                  else{
                  echo "Insert failed: ". $conn->error;
                  }
-
 
         ?>   
 <html lang="en">
@@ -116,7 +197,7 @@
                 </div>
             </div>
             <div class="foot">
-                    <a href="home.php?customerid=<?=$urow['CUSTOMER_ID']?>"><button>Confirm</button></a><br>
+                    <a href="home.php?customerid=<?=$urow['CUSTOMER_ID']?>"><button>Return to Home</button></a><br>
             </div>
             <?php
             $sqli = "INSERT INTO counts (NONES)

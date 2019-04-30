@@ -1,12 +1,10 @@
 <?php
-            $servername = null;
+            $servername = "localhost";
             $username = "root";
-            $password = "pizzahouse";
+            $password = "";
             $dbname = "pizzahouse";
-            $port=null;
-            $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-           
-           $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -38,19 +36,17 @@
         
 
         
-        $servername = null;
-            $username = "root";
-            $password = "pizzahouse";
-            $dbname = "pizzahouse";
-            $port=null;
-            $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-           
-           $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "pizzahouse";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 } 
-	$q = "UPDATE customer set FNAME='$firstname', LNAME='$lastname' , EMAIL='$cemail' , CPASSWORD=$cpassword , CADDRESS1='$address1' , CADDRESS2='$address2' , TEL_NO=$telephone where CUSTOMER_ID=$customerid";
+	$q = "UPDATE customer set FNAME='$firstname', LNAME='$lastname' , EMAIL='$cemail' , CPASSWORD='$cpassword' , CADDRESS1='$address1' , CADDRESS2='$address2' , TEL_NO='$telephone' where CUSTOMER_ID=$customerid";
 	
 	if(!$conn->query($q)){
 		echo "Update failed: ". $conn->error;

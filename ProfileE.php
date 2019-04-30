@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <?php
-           $servername = null;
-           $username = "root";
-           $password = "pizzahouse";
-           $dbname = "pizzahouse";
-           $port=null;
-           $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-          
-          $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "pizzahouse";
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -65,9 +63,8 @@
                         </ul>
                 </div>
             </div>
-                    <div class="profile">
-                    <img src="avatar11.png" class="avatar2">
-                  
+          
+              
                     
             </div>
            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

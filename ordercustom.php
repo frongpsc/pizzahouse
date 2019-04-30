@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <?php
-            $servername = null;
+            $servername = "localhost";
             $username = "root";
-            $password = "pizzahouse";
+            $password = "";
             $dbname = "pizzahouse";
-            $port=null;
-            $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-           
-           $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -16,7 +14,7 @@
         error_reporting(E_ALL);
         ini_set('display error', 1);
         $cid = $_GET['customerid'];
-        echo $cid;
+      
 
         $q = "SELECT * from customer where CUSTOMER_ID= '$cid' ";
         $result = $conn->query($q);

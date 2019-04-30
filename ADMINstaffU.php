@@ -1,0 +1,49 @@
+<?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "pizzahouse";
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
+
+        if($conn->connect_error){
+                die("Connection failed: " . $conn->connect_error);
+        }
+
+        error_reporting(E_ALL);
+        ini_set('display error', 1);
+        $sid = $_POST['sid'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $pass = $_POST["pass"];
+        $sex = $_POST['sex'];
+        $tel = $_POST['tel'];
+
+        echo $sid;
+        echo $name;
+        echo $surname;
+        echo $pass;
+        echo $sex;
+        echo $tel;
+
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "pizzahouse";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
+	$q = "UPDATE staff set STAFF_NAME='$name', STAFF_SURNAME='$surname' , PASSWORDs='$pass' , SEX='$sex', STAFF_TEL='$tel'  where STAFF_ID=$sid";
+	
+	if(!$conn->query($q)){
+		echo "Update failed: ". $conn->error;
+	}else{
+        
+        header("Location: ADMINstaff.php");
+
+	}
+?>

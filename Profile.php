@@ -1,14 +1,11 @@
 
 <!DOCTYPE html>
 <?php
-            $servername = null;
+            $servername = "localhost";
             $username = "root";
-            $password = "pizzahouse";
+            $password = "";
             $dbname = "pizzahouse";
-            $port=null;
-            $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-
-        $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -18,6 +15,8 @@
         ini_set('display error', 1);
         $loginemail = $_POST["iemail"];
         $loginPassword = $_POST["ipass"];  
+
+
         ?>            
 <html lang="en">
 <head>
@@ -80,6 +79,8 @@
             </div>
                     <div class="profile">
                     <img src="avatar11.png" class="avatar2">
+                    <a href="History.php?customerid=<?=$array["CUSTOMER_ID"]?>"><img src="history.png" class="avatar3" ></a>
+
                    
                     
             </div>

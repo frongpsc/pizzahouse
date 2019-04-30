@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700i" rel="stylesheet">
     <link rel="stylesheet" href="css/style8.css">
+    <link rel="stylesheet" href="css/styleNL.css">
+
     <title>T.PIZZA</title>
 </head>
 <body>  
@@ -17,16 +19,13 @@
                     </div>
                     <ul class="menu">
                     <li>
-                        <a href="home.php">HOME</a>
+                        <a href="homeNL.php">HOME</a>
                     </li>
                     <li>
-                        <a href="aboutus.php">ABOUT US</a>
+                        <a href="aboutusNL.php">ABOUT US</a>
                     </li>
                     <li>
-                        <a href="order.php">MENU</a>
-                    </li>
-                    <li>
-                        <a href="ordered.php">ORDER</a>
+                        <a href="orderNL.php">MENU</a>
                     </li>
                     <li>
                         <a href="inup.php">LOGIN</a>

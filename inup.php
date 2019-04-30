@@ -15,14 +15,13 @@ if(isset($_POST['csubmit']))
         $address2 = $_POST["address2"];
         $telephone = $_POST["telephone"];
 
-        $servername = null;
-        $username = "root";
-        $password = "pizzahouse";
-        $dbname = "pizzahouse";
-        $port=null;
-        $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-       
-       $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "pizzahouse";
+                
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
@@ -81,7 +80,7 @@ if(isset($_POST['csubmit']))
     <div class="loginbox">
     <img src="avatar11.png" class="avatar">
         <h1>Login</h1>
-        <form action = "Profile.php" method="post">
+        <form  method="post">
             <p>Email</p>
             <input type="text" name="iemail" placeholder="Enter Email">
             <p>Password</p>
@@ -93,14 +92,12 @@ if(isset($_POST['csubmit']))
         </form>
     
         <?php
-           $servername = null;
-           $username = "root";
-           $password = "pizzahouse";
-           $dbname = "pizzahouse";
-           $port=null;
-           $socket="/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
-          
-          $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "pizzahouse";
+
+        $conn = new mysqli($servername, $username,$password, $dbname);
 
         if($conn->connect_error){
                 die("Connection failed: " . $conn->connect_error);
@@ -111,13 +108,23 @@ if(isset($_POST['csubmit']))
 
         if(isset($_POST["loginButton"])){
                 $loginemail = $_POST["iemail"];
-                $loginPassword = $_POST["ipass"];              
+                $loginPassword = $_POST["ipass"];     
                 $query = "SELECT * FROM customer WHERE EMAIL='$loginemail' and CPASSWORD='$loginPassword'";
                 $result = mysqli_query($conn,$query) or die(mysqli_error());
                 $count = mysqli_num_rows($result);
+
+                $query2 = "SELECT * FROM staff WHERE STAFF_NAME='$loginemail' and PASSWORDs='$loginPassword'";
+                $result2 = mysqli_query($conn,$query2) or die(mysqli_error());
+                $count2 = mysqli_num_rows($result2);
+
                 if ($count == 1){
-                        header("Location:Profile.php");
+
+                        header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
                 }
+                elseif ($count2 == 1){
+
+                    header("Location:staff.php?email=$loginemail&pass=$loginPassword");
+            }
                 else
                 {
                 echo '<span style="color:#FFD700;">Invalid Email or Password!!</span>';
