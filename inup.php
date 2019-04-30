@@ -128,6 +128,7 @@ if(isset($_POST['csubmit']))
 
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
                         header("Location:home.php");
+                        exit;
 
                         echo 'eiei if 1';
                 }
