@@ -127,10 +127,18 @@ if(isset($_POST['csubmit']))
                 $count2 = mysqli_num_rows($result2);
 
                 if ($count == 1){
-
+        ?>
+        <script type="text/javascript">
+            
+            $('.entry a:first').click(function()
+{
+    window.location.replace("http://www.google.com");
+});
+        </script>
+        <?php
                         //header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
                         header("location:https://pizzahousenew.appspot.com/home.php");
-                        exit();
+                        
                         echo 'eiei if 1';
                 }
                 elseif ($count2 == 1){
