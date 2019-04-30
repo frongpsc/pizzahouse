@@ -1,10 +1,14 @@
 <?php
- $servername = "localhost";
+ $servername = null;
  $username = "root";
- $password = "";
- $dbname = "pizzahouse";
+ $password = "pizzahouse";
 
-$conn = new mysqli($servername, $username,$password, $dbname);
+ $dbname = "pizzahouse";
+ $port = null;
+ $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
+
+$conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
 
 if($conn->connect_error){
      die("Connection failed: " . $conn->connect_error);
@@ -26,12 +30,16 @@ error_reporting(E_ALL);
 ini_set('display error', 1);
 if ($eiei == "PREPARE")
 {
-    $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "pizzahouse";
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+    $servername = null;
+    $username = "root";
+    $password = "pizzahouse";
+
+    $dbname = "pizzahouse";
+    $port = null;
+    $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
+
+$conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
@@ -49,12 +57,16 @@ if ($eiei == "PREPARE")
 
 if ($eiei == "SENT")
 {
-    $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "pizzahouse";
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+    $servername = null;
+    $username = "root";
+    $password = "pizzahouse";
+
+    $dbname = "pizzahouse";
+    $port = null;
+    $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
+
+$conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
@@ -72,12 +84,16 @@ if ($eiei == "SENT")
 
 if ($eiei == "COMPLETE")
 {
-    $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "pizzahouse";
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+    $servername = null;
+            $username = "root";
+            $password = "pizzahouse";
+     
+            $dbname = "pizzahouse";
+            $port = null;
+            $socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
+
+        $conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);

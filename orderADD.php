@@ -1,11 +1,15 @@
 <?php
 
-$servername = "localhost";
+$servername = null;
 $username = "root";
-$password = "";
-$dbname = "pizzahouse";
+$password = "pizzahouse";
 
-$conn = new mysqli($servername, $username,$password, $dbname);
+$dbname = "pizzahouse";
+$port = null;
+$socket = "/cloudsql/pizzahousenew:asia-southeast1:pizzahouse";
+
+$conn = new mysqli($servername, $username,$password, $dbname,$port,$socket);
+
 
 if($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
