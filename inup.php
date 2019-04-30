@@ -130,7 +130,7 @@ if(isset($_POST['csubmit']))
         ?>
         <script type="text/javascript">
             
-            window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email="$loginemail"&pass="$loginPassword"");
+            window.location.replace("https://pizzahousenew.appspot.com/inupC.php?email=<?php $loginemail?>&pass=<?php$loginPassword?>");
         </script>
         <?php
                         header("Location:inupC.php?email=$loginemail&pass=$loginPassword");
