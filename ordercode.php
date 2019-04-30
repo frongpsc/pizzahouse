@@ -49,8 +49,8 @@
         echo $nrow['STATUS_ID'];
          }
 
-        $u = "INSERT INTO orders (ORDER_ID,ORDER_DATEs,ORDER_ADDs,ORDER_TIMEs,ORDER_PRICEs,CUSTOMER_ID,STATUS_ID,STAFF_ID)
-        VALUES ($oid,'$nd','$aid','$nt',$pid,$cid,0,1)";
+        $u = "INSERT INTO orders (ORDER_ID,ORDER_DATEs,ORDER_ADDs,ORDER_TIMEs,ORDER_PRICEs,CUSTOMER_ID,STATUS_ID,STAFF_ID,CTIME)
+        VALUES ($oid,'$nd','$aid','$nt',$pid,$cid,0,1,99)";
                     if ($conn->query($u) === TRUE) {
 
                         //header("Location: ordered.php?customerid=$cid");
