@@ -149,6 +149,11 @@ $erow = $result5->fetch_array();
 
 $pid = $erow["PIZZA_ID"];
 
-header("Location:flavorU.php?customerid=$cid&pizzaid=$pid");
+//header("Location:flavorU.php?customerid=$cid&pizzaid=$pid");
 
 ?>
+                    <script type="text/javascript">
+            
+            window.location.replace("https://pizzahousenew.appspot.com/flavorU.php?customerid=<?php echo $cid;?>&pizzaid=<?php echo $pid; ?>");
+        </script>
+                    
